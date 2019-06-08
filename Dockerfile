@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:10-alpine
 
 ENV NODE_ENV development
 
@@ -8,8 +8,8 @@ COPY package.json .
 
 RUN npm install
 
-COPY src ./src
+COPY src src
 
-COPY public ./public
+COPY public public
 
-CMD ["npm","start"]
+CMD ["npm","start"] 
